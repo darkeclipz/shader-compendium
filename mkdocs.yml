@@ -13,6 +13,8 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: true
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
   
 extra_javascript:
   - javascripts/config.js
