@@ -1,6 +1,6 @@
 # Raymarcher
 
-This is a very simple raymarching algorithm, which requires a ray origin $O$, and a ray direction $D$ as input.
+This is a very simple raymarching algorithm, which requires a ray origin $O$ (`ro`), and a ray direction $D$ (`rd`) as input.
 The output of the function is the distance from the origin to the intersection point.
 This intersection point is calculated with $P = O + t\cdotD$.
 
