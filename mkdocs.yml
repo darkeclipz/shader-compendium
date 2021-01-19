@@ -1,0 +1,7 @@
+site_name: Shader Compendium
+theme:
+  name: material
+  palette:
+    primary: black
+  #logo: img/favicon.png
+  
