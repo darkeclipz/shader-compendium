@@ -13,8 +13,8 @@ This intersection point is calculated with $P = \textrm{ro} + t\cdot \textrm{rd}
 #define MAX_MARCH_DIST 20.
 #define MAX_MARCH_STEPS 60.
 float march(in vec3 ro, in vec3 rd) {
-    float t = 0., 
-        i = 0.;
+    float t = 0.;
+    float i = 0.;
     for(i=0.; i < MAX_MARCH_STEPS; i++) {
         vec3 p = ro + t*rd;
         float d = map(p);
@@ -41,10 +41,9 @@ The algorithm has the following global parameters:
 
 ## Requires
 
-The algorithm also requires a `map(vec3 p)` function, which is the output of an SDF function (or combined SDF's). 
+The algorithm also requires a `map(vec3 point)` function, which is the output of a [3D SDF](#). 
 
 ## Credits
 
 Author: Lars Rotgers
-
 License: Public Domain
