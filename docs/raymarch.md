@@ -1,6 +1,6 @@
 # Raymarcher
 
-![Raymarch](https://adrianb.io/img/2016-10-01-raymarching/figure3.png)
+![Raymarch](https://adrianb.io/img/2016-10-01-raymarching/figure3.png){: align=center }
 
 <center>
 Illustration of the algorithm &mdash; Image from https://adrianb.io/2016/10/01/raymarching.html</center>
