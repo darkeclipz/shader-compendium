@@ -2,6 +2,9 @@
 
 ![Raymarch](https://adrianb.io/img/2016-10-01-raymarching/figure3.png)
 
+<center>
+Illustration of the algorithm &mdash; Image from https://adrianb.io/2016/10/01/raymarching.html</center>
+
 ## Description
 
 This is a raymarching algorithm, which will intersect a ray with the scene. It requires a ray origin `ro`, and a ray direction `rd` as input.
