@@ -9,7 +9,7 @@ Illustration of the algorithm &mdash; Image from https://adrianb.io/2016/10/01/r
 
 This is a raymarching algorithm, which will intersect a ray with the scene. It requires a ray origin `ro`, and a ray direction `rd` as input.
 The output of the function a value `t`, which is the distance from the origin to the intersection point.
-This intersection point is then calculated with $$P = \textrm{ro} + t\cdot \textrm{rd}$$. The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#). 
+This intersection point is then calculated with $$P = \textrm{ro} + t\cdot \textrm{rd}.$$ The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#). 
 
 The algorithm has the following global parameters:
 
