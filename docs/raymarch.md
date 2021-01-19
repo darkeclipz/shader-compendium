@@ -6,7 +6,7 @@ This is raymarching algorithm requires a ray origin `ro`, and a ray direction `r
 The output of the function is the distance `t` from the origin to the intersection point.
 This intersection point is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}$.
 
-The algorithm also requires a `map(vec3 point)` function, which is the output of a [3D SDF](#). 
+The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#). 
 
 The algorithm has the following global parameters:
 
