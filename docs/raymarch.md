@@ -1,5 +1,7 @@
 # Raymarcher
 
+![Raymarch](https://adrianb.io/img/2016-10-01-raymarching/figure3.png)
+
 ## Description
 
 This is a raymarching algorithm, which will intersect a ray with the scene. It requires a ray origin `ro`, and a ray direction `rd` as input.
