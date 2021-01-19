@@ -4,6 +4,8 @@ theme:
   palette:
     primary: black
   #logo: img/favicon.png
+  features:
+    - navigation.expand
 
 markdown_extensions:
   - pymdownx.arithmatex:
