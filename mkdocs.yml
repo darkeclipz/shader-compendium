@@ -6,6 +6,8 @@ theme:
   #logo: img/favicon.png
   features:
     - navigation.expand
+  hljs_languages:
+    - glsl
 
 markdown_extensions:
   - pymdownx.arithmatex:

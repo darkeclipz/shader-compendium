@@ -1,1 +1,0 @@
-# 3D Euclidean Signed Distance Functions

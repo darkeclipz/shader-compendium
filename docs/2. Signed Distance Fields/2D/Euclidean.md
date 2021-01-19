@@ -1,1 +1,0 @@
-# 2D Euclidean Signed Distance Functions

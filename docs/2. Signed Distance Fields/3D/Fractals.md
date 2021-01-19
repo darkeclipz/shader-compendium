@@ -1,1 +1,0 @@
-# 3D Fractal Signed Distance Functions
