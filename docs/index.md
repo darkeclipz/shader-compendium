@@ -8,7 +8,7 @@ This includes snippets of code for distance functions, SDF operators, lighting m
 Every snippet of code will have the original author and their chosen license included.
 
 ## Contribute?
-I'd love if you would like to contribute, simply create a pull request on GitHub, and I'll gladly add it! :)
+I'd love if you would like to contribute, simply create a pull request on GitHub, and I'll gladly add it!
 
 ## Test
 

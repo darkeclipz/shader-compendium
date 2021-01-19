@@ -4,26 +4,28 @@ This is a very simple raymarching algorithm, which requires a ray origin $O$, an
 The output of the function is the distance from the origin to the intersection point.
 This intersection point is calculated with $P = O + t\cdotD$.
 
-    #define MIN_MARCH_DIST 0.001
-    #define MAX_MARCH_DIST 20.
-    #define MAX_MARCH_STEPS 60.
-    float march(in vec3 ro, in vec3 rd) {
-        float t = 0., 
-            i = 0.;
-        for(i=0.; i < MAX_MARCH_STEPS; i++) {
-            vec3 p = ro + t*rd;
-            float d = map(p);
-            if(d < MIN_MARCH_DIST)
-                break;
-            t += d;
-            if(t > MAX_MARCH_DIST)
-                break;
-        }
-        if(i >= MAX_MARCH_STEPS) {
-            t = MAX_MARCH_DIST;
-        }
-        return t;
+```glsl
+#define MIN_MARCH_DIST 0.001
+#define MAX_MARCH_DIST 20.
+#define MAX_MARCH_STEPS 60.
+float march(in vec3 ro, in vec3 rd) {
+    float t = 0., 
+        i = 0.;
+    for(i=0.; i < MAX_MARCH_STEPS; i++) {
+        vec3 p = ro + t*rd;
+        float d = map(p);
+        if(d < MIN_MARCH_DIST)
+            break;
+        t += d;
+        if(t > MAX_MARCH_DIST)
+            break;
     }
+    if(i >= MAX_MARCH_STEPS) {
+        t = MAX_MARCH_DIST;
+    }
+    return t;
+}
+```
 
 The algorithm has the following global parameters:
 
