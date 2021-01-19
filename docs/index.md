@@ -7,3 +7,7 @@ Every snippet of code will have the original author and his/her license included
 
 # Contribute?
 I'd love if you want to contribute, simply create a pull request on GitHub, and I'll gladly add it! :)
+
+# Test
+
+$$ ax^2 + bx + c$$
