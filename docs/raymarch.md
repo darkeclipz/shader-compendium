@@ -2,9 +2,9 @@
 
 ## Description
 
-This is a very simple raymarching algorithm, which requires a ray origin `ro`, and a ray direction `rd` as input.
+This is raymarching algorithm requires a ray origin `ro`, and a ray direction `rd` as input.
 The output of the function is the distance `t` from the origin to the intersection point.
-This intersection point is calculated with $P = \textrm{ro} + t\cdot \textrm{rd}$.
+This intersection point is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}$.
 
 ## Code
 
