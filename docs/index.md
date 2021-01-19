@@ -1,12 +1,9 @@
 # What is the Shader Compendium?
-
 The Shader Compendium is an attempt to unify tons of functions that are commonly used to write shaders. 
-This includes functions for distance functions, SDF operators, lighting models, rendering algorihms, color functions, and many other small utility functions.
+This includes snippets of code for distance functions, SDF operators, lighting models, rendering algorithms, color functions, and many other small utility functions.
 
 # What about licensing?
-
 Every snippet of code will have the original author and his/her license included.
 
 # Contribute?
-
 I'd love if you want to contribute, simply create a pull request on GitHub, and I'll gladly add it! :)
