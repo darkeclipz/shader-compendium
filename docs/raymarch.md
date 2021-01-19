@@ -2,9 +2,9 @@
 
 ## Description
 
-This is a very simple raymarching algorithm, which requires a ray origin $O$ (`ro`), and a ray direction $D$ (`rd`) as input.
-The output of the function is the distance from the origin to the intersection point.
-This intersection point is calculated with $P = O + t\cdot D$.
+This is a very simple raymarching algorithm, which requires a ray origin `ro`, and a ray direction `rd` as input.
+The output of the function is the distance `t` from the origin to the intersection point.
+This intersection point is calculated with $P = \textrm{ro} + t\cdot \textrm{rd}$.
 
 ## Code
 
@@ -41,7 +41,7 @@ The algorithm has the following global parameters:
 
 ## Requires
 
-The algorithm also requires a `map(vec3 p)` function, which is the output of an SDF (or combined SDF's). 
+The algorithm also requires a `map(vec3 p)` function, which is the output of an SDF function (or combined SDF's). 
 
 ## Credits
 
