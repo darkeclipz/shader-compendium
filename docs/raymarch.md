@@ -13,9 +13,11 @@ This intersection point is then calculated with $P = \textrm{ro} + t\cdot \textr
 
 The algorithm has the following global parameters:
 
- * `MIN_MARCH_DISTANCE`: The minimum distance to the object to qualify as a 'hit'. Lower values will increase the detail, but slow down the algorithm.
- * `MAX_MARCH_DISTANCE`: The maximum distance that a ray is allowed to travel. Larger values will render the scene further, but slow down the algorithm.
- * `MAX_MARCH_STEP`: The maximum amount of steps the algorithm is allowed to take. Increase this if the detail between complex objects is poor. Higher values will slow down the algorithm.
+|Variable|Description|
+|--|--|
+|`MIN_MARCH_DISTANCE`|The minimum distance to the object to qualify as a 'hit'. Lower values will increase the detail, but slow down the algorithm.|
+|`MAX_MARCH_DISTANCE`|The maximum distance that a ray is allowed to travel. Larger values will render the scene further, but slow down the algorithm.|
+|`MAX_MARCH_STEP`|The maximum amount of steps the algorithm is allowed to take. Increase this if the detail between complex objects is poor. Higher values will slow down the algorithm.|
 
 ## Code
 
