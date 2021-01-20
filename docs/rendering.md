@@ -1,6 +1,8 @@
-# Raymarcher
+# Rendering
 
-## Description
+## Raymarcher
+
+### Description
 
 A raymarching algorithm will intersect the scene by stepping a ray into the scene. 
 At each step the distance, $d$, to the nearest object is calculated with a signed distance function, which is then used as the distance to safely step forward. 
@@ -24,7 +26,7 @@ The algorithm has the following global parameters:
 |`MAX_MARCH_DISTANCE`|The maximum distance that a ray is allowed to travel. Larger values will render the scene further, but slow down the algorithm.|
 |`MAX_MARCH_STEP`|The maximum amount of steps the algorithm is allowed to take. Increase this if the detail between complex objects is poor. Higher values will slow down the algorithm.|
 
-## Code
+### Code
 
 ```glsl
 #define MIN_MARCH_DIST 0.001
@@ -61,8 +63,23 @@ float march(in vec3 ro, in vec3 rd) {
     }
     ```
 
-## Credits
+### Credits
 
 |Author|License|
 |--|--|
 |Lars Rotgers|Public Domain|
+
+## Normals
+
+A normal vector is the vector $\nabla f(\mathbf{X})$. 
+This can be calculated numerically with the central differences method.
+
+```glsl
+vec3 normal(in vec3 p) {
+    float eps = MIN_MARCH_DIST;
+    vec2 h = vec2(eps, 0);
+    return normalize(vec3(map(p+h.xyy) - map(p-h.xyy),
+                          map(p+h.yxy) - map(p-h.yxy),
+                          map(p+h.yyx) - map(p-h.yyx)));
+}
+```
