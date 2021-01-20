@@ -1,6 +1,12 @@
 # 3D SDF Shapes
 
-## Circle
+## Sphere
+
+```glsl
+float sdSphere(in vec3 p, float r) {
+    return length(p) - r;
+}
+```
 
 ## Box
 
