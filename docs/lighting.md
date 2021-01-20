@@ -2,6 +2,8 @@
 
 ## GGX
 
+The GGX lighting model is derived in this paper: http://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf.
+
 ```glsl
 float G1V(float dotNV, float k) {
     return 1.0 / (dotNV * (1.0 - k) + k);
