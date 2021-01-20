@@ -9,7 +9,17 @@
 
 This is a raymarching algorithm, which will intersect a ray with the scene. It requires a ray origin `ro`, and a ray direction `rd` as input.
 The output of the function a value `t`, which is the distance from the origin to the intersection point.
-This intersection point $P$ is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}.$ The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#). 
+This intersection point $P$ is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}.$ 
+
+!!! info
+
+    The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#), for example:
+
+    ```glsl
+    float map(vec3 p) {
+        return length(p) - 0.5; // Circle SDF
+    }
+    ```
 
 The algorithm has the following global parameters:
 
