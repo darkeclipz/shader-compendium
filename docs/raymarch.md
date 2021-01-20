@@ -1,9 +1,9 @@
 # Raymarcher
 
-![Raymarch](https://adrianb.io/img/2016-10-01-raymarching/figure3.png){: align=center }
-
-<center>
-Illustration of the algorithm &mdash; Image from https://adrianb.io/2016/10/01/raymarching.html</center>
+<figure>
+  <img src="https://adrianb.io/img/2016-10-01-raymarching/figure3.png" width="300" />
+  <figcaption>Image by https://adrianb.io</figcaption>
+</figure>
 
 ## Description
 
@@ -15,7 +15,7 @@ The algorithm has the following global parameters:
 
 |Variable|Description|
 |--|--|
-|`MIN_MARCH_DISTANCE`|The minimum distance to the object to qualify as a 'hit'. Lower values will increase the detail, but slow down the algorithm.|
+|`MIN_MARCH_DISTANCE`|The minimum distance to the object to qualify as a hit. Lower values will increase the detail, but slow down the algorithm.|
 |`MAX_MARCH_DISTANCE`|The maximum distance that a ray is allowed to travel. Larger values will render the scene further, but slow down the algorithm.|
 |`MAX_MARCH_STEP`|The maximum amount of steps the algorithm is allowed to take. Increase this if the detail between complex objects is poor. Higher values will slow down the algorithm.|
 
