@@ -1,5 +1,16 @@
 # Rendering
 
+## Camera
+
+```glsl
+vec3 ro = vec3(0,0,-1.);
+vec3 ta = vec3(0,0,0);
+vec3 ww = normalize(ta-ro);
+vec3 uu = normalize(cross(ww, vec3(0,1,0)));
+vec3 vv = normalize(cross(uu,ww));
+vec3 rd = normalize(uv.x*uu + uv.y*vv + 1.0*ww);
+```
+
 ## Raymarcher
 
 ### Description
