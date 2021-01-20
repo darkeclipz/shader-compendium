@@ -3,7 +3,7 @@
 ## Description
 
 A raymarching algorithm will intersect the scene by stepping a ray into the scene. 
-At each step the distance to the nearest object is calculated with a signed distance function, which is then used as the distance to safely step forward. 
+At each step the distance, $d$, to the nearest object is calculated with a signed distance function, which is then used as the distance to safely step forward. 
 An object is hit when the distance is smaller than some $\epsilon$, for example: $d < 0.001$. 
 This illustration visualizes this process.
 
@@ -15,16 +15,6 @@ This illustration visualizes this process.
 The algorithm requires a ray origin `ro`, and a ray direction `rd` as input.
 The output of the algorithm is a value `t`, which is the distance from the origin to the intersection point.
 This intersection point $P$ is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}.$ 
-
-!!! info
-
-    The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#), for example:
-
-    ```glsl
-    float map(vec3 p) {
-        return length(p) - 0.5; // Circle SDF
-    }
-    ```
 
 The algorithm has the following global parameters:
 
@@ -58,6 +48,18 @@ float march(in vec3 ro, in vec3 rd) {
     return t;
 }
 ```
+
+[See demo](https://www.shadertoy.com/view/3tyyWm){: .md-button }
+
+!!! info
+
+    The algorithm requires a `map(vec3 point)` function (line 9), which is the output of a [3D SDF](#), for example:
+
+    ```glsl
+    float map(vec3 p) {
+        return length(p) - 0.5; // Circle SDF
+    }
+    ```
 
 ## Credits
 
