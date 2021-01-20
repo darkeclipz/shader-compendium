@@ -1,14 +1,19 @@
 # Raymarcher
 
+## Description
+
+A raymarching algorithm will intersect the scene by stepping a ray into the scene. 
+At each step the distance to the nearest object is calculated with a signed distance function, which is then used as the distance to safely step forward. 
+An object is hit when the distance is smaller than some $\epsilon$, for example: $d < 0.001$. 
+This illustration visualizes this process.
+
 <figure>
-  <img src="https://adrianb.io/img/2016-10-01-raymarching/figure3.png" width="300" />
+  <img src="https://adrianb.io/img/2016-10-01-raymarching/figure3.png" width="600" />
   <figcaption>Image by https://adrianb.io</figcaption>
 </figure>
 
-## Description
-
-This is a raymarching algorithm, which will intersect a ray with the scene. It requires a ray origin `ro`, and a ray direction `rd` as input.
-The output of the function a value `t`, which is the distance from the origin to the intersection point.
+The algorithm requires a ray origin `ro`, and a ray direction `rd` as input.
+The output of the algorithm is a value `t`, which is the distance from the origin to the intersection point.
 This intersection point $P$ is then calculated with $P = \textrm{ro} + t\cdot \textrm{rd}.$ 
 
 !!! info
