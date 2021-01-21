@@ -28,7 +28,7 @@ TBA
 float brdf_gaussian(vec3 N, vec3 H, float m) {
     float NHm = angle(N,H) / m;
     float NHm2 = NHm*NHm;
-    float k = exp(-NHm2)*1.2;
+    float k = exp(-NHm2);
     return k;
 }
 ```
@@ -84,3 +84,4 @@ float brdf_ggx(vec3 N, vec3 V, vec3 L, float roughness, float F0) {
 
 * [1] [Optimizing GGX Shaders with dot(L,H)](http://filmicworlds.com/blog/optimizing-ggx-shaders-with-dotlh/).
  * [Physically Based Lighting at Pixar](https://blog.selfshadow.com/publications/s2013-shading-course/pixar/s2013_pbs_pixar_notes.pdf).
+ * [Physically Based Shading at Disney](https://neil3d.github.io/assets/pdf/s2012_pbs_disney_brdf_notes_v3.pdf).
