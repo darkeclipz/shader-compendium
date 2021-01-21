@@ -2,6 +2,7 @@
 
 ## Sphere
 
+A sphere has a single parameter `r`, which is the radius of the sphere.
 
 <figure>
   <img src="../img/sphere.png" width="400"/>
@@ -13,7 +14,14 @@ float sdSphere(in vec3 p, float r) {
 }
 ```
 
+|Author|License|
+|--|--|
+|Lars Rotgers|Public Domain|
+
 ## Box
+
+A box has three parameters, which are stored in a `vec3`. 
+These are used to define the width, length, and height of the box.
 
 <figure>
   <img src="../img/box.png" width="400"/>
@@ -27,7 +35,10 @@ float sdBox( vec3 p, vec3 b )
 }
 ```
 
-Credits: Inigo Quilez
+|Author|License|
+|--|--|
+|Inigo Quilez|The MIT License|
+
 
 ## Cylinder
 

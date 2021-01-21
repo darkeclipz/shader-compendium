@@ -2,7 +2,7 @@
 
 ## GGX
 
-The GGX lighting model is derived in this paper: http://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf.
+The GGX lighting model is a microfacet model for refracting through rough surfaces. It is also a model that is becoming popular for lighting in video games. [1] The GGX lighting model is [derived in this paper](http://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf).
 
 ```glsl
 float G1V(float dotNV, float k) {
@@ -28,4 +28,11 @@ float brdf_ggx(vec3 N, vec3 V, vec3 L, float roughness, float F0) {
 }
 ```
 
-Source: http://filmicworlds.com/blog/optimizing-ggx-shaders-with-dotlh/.
+|Author|License|
+|--|--|
+|John Hable|None|
+
+# References
+
+* [1] [Optimizing GGX Shaders with dot(L,H)](http://filmicworlds.com/blog/optimizing-ggx-shaders-with-dotlh/).
+ * [Physically Based Lighting at Pixar](https://blog.selfshadow.com/publications/s2013-shading-course/pixar/s2013_pbs_pixar_notes.pdf).

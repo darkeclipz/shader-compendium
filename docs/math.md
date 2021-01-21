@@ -18,5 +18,5 @@ mat2 rotate(float a) {
     For example, to rotate on the Y-axis:
 
     ```glsl
-    p.xz *= rotate(angle)    
+    p.xz *= rotate(angle); 
     ```
