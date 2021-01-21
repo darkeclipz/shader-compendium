@@ -2,6 +2,11 @@
 
 ## Sphere
 
+
+<figure>
+  <img src="img/sphere.png" width="400"/>
+</figure>
+
 ```glsl
 float sdSphere(in vec3 p, float r) {
     return length(p) - r;
@@ -9,6 +14,10 @@ float sdSphere(in vec3 p, float r) {
 ```
 
 ## Box
+
+<figure>
+  <img src="img/box.png" width="400"/>
+</figure>
 
 ```glsl
 float sdBox( vec3 p, vec3 b )
