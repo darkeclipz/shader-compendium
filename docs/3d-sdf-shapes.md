@@ -4,7 +4,7 @@
 
 
 <figure>
-  <img src="img/sphere.png" width="400"/>
+  <img src="../img/sphere.png" width="400"/>
 </figure>
 
 ```glsl
@@ -16,7 +16,7 @@ float sdSphere(in vec3 p, float r) {
 ## Box
 
 <figure>
-  <img src="img/box.png" width="400"/>
+  <img src="../img/box.png" width="400"/>
 </figure>
 
 ```glsl
