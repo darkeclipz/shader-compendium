@@ -2,13 +2,51 @@
 
 ## Lambertian
 
+```glsl
+float brdf_lambertian(vec3 N, vec3 L) {
+    float k = clamp(dot(N, L), 0., 1.);
+    return k;
+}
+```
+
 ## Phong
+
+```glsl
+float brdf_phong(vec3 R, vec3 V, float exponent) {
+    float k = pow(max(0., dot(R,V)), exponent);
+    return k;
+}
+```
 
 ## Blinn-Phong
 
+TBA
+
 ## Gaussian
 
+```glsl
+float brdf_gaussian(vec3 N, vec3 H, float m) {
+    float NHm = angle(N,H) / m;
+    float NHm2 = NHm*NHm;
+    float k = exp(-NHm2)*1.2;
+    return k;
+}
+```
+
 ## Beckmann
+
+```glsl
+float brdf_beckmann(vec3 N, vec3 H, float m) {
+    float NdotH = dot(N, H);
+    float tana = length(cross(N, H)) / NdotH;
+    float cosa = NdotH;
+    float m2 = m*m;
+    float tana2 = tana*tana;
+    float cosa4 = pow(abs(cosa), 4.);
+    float k = exp(-tana2 / m2) / (3.14159 * m2 * cosa4);
+    return k;
+}
+```
 
 ## GGX
 
