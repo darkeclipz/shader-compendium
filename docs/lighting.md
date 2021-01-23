@@ -18,10 +18,10 @@ Let $P$ be the point on the surface, then:
 
 To find the reflection vector, we can use $R = \mathbf{V} - 2(mathbf{V}\cdot\mathbf{N})\mathbf{N}$.
 
-To find the halfway vector, we can use $H$ = \dfrac{L+V}{||\ L+V\ ||}$.
+To find the halfway vector, we can use $H = \dfrac{L+V}{||\ L+V\ ||}$.
 
 !!! warn
-Note that all of these vectors are normalized, which is often denoted with a hat, like $\mathbf\hat{N}$.
+    Note that all of these vectors are normalized, which is often denoted with a hat, like $\mathbf{\hat{N}}$.
 
 ## Lambertian
 
