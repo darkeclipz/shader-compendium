@@ -1,6 +1,7 @@
 # Lighting models
 
-All the lighting models use the following notation, as illustrated in the image below.
+All the lighting models described on this page use the following notation, 
+as illustrated in the image below.
 
 <figure>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Blinn_Vectors.svg/220px-Blinn_Vectors.svg.png" />
@@ -15,7 +16,6 @@ Let $P$ be the point on the surface, then:
  * $\mathbf{H}$ is the halfway vector between $L$ and $V$.
  * $\mathbf{R}$ is the reflected vector $V$ around $N$.
 
-
 To find the reflection vector, we can use $R = \mathbf{V} - 2(mathbf{V}\cdot\mathbf{N})\mathbf{N}$.
 
 To find the halfway vector, we can use $H$ = \dfrac{L+V}{||\ L+V\ ||}$.
@@ -28,6 +28,9 @@ Note that all of these vectors are normalized, which is often denoted with a hat
 <figure>
     <img src="../img/diffuse.png" width="300">
 </figure>
+
+The Lambertian diffuse model is based on the angle between the light $L$ and the surface normal $N$.
+It is based on Lambert's Law, which states that more light is reflected if $L$ is point in the same direction as $N$ (perpendicular), and no light is reflected if $L$ is perpendicular to $N$ (90 degrees).
 
 ```glsl
 float brdf_lambertian(vec3 N, vec3 L) {
