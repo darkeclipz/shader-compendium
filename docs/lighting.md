@@ -5,7 +5,7 @@ as illustrated in the image below.
 
 <figure>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Blinn_Vectors.svg/220px-Blinn_Vectors.svg.png" />
-    <caption>Source &emdash; Wikipedia</caption>
+    <caption>Source &mdash; Wikipedia</caption>
 </figure>
 
 Let $P$ be the point on the surface, then:
