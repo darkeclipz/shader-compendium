@@ -18,9 +18,9 @@ Let $P$ be the point on the surface, then:
 
 To find the reflection vector, we can use $\mathbf{R} = \mathbf{V} - 2(\mathbf{V}\cdot\mathbf{N})\mathbf{N}$, where $\mathbf{V}\cdot\mathbf{N}$ is a dot-product.
 
-To find the halfway vector, we can use $\mathbf{H} = \dfrac{\mathbf{L}+\mathbf{V}}{||\ \matbf{L}+\mathbf{V}\ ||}$.
+To find the halfway vector, we can use $\mathbf{H} = \dfrac{\mathbf{L}+\mathbf{V}}{||\ \mathbf{L}+\mathbf{V}\ ||}$.
 
-!!! warn
+!!! attention
     Note that all of these vectors are normalized, which is often denoted with a hat, like $\mathbf{\hat{N}}$.
 
 ## Lambertian
@@ -29,8 +29,8 @@ To find the halfway vector, we can use $\mathbf{H} = \dfrac{\mathbf{L}+\mathbf{V
     <img src="../img/diffuse.png" width="300">
 </figure>
 
-The Lambertian diffuse model is based on the angle between the light $L$ and the surface normal $N$.
-It is based on Lambert's Law, which states that more light is reflected if $L$ is point in the same direction as $N$ (perpendicular), and no light is reflected if $L$ is perpendicular to $N$ (90 degrees).
+[Lambertian reflectance](https://en.wikipedia.org/wiki/Lambertian_reflectance) looks like an ideal "matte" or diffuse reflecting material. 
+It is based on the angle between the light $\mathbf{L}$ and the surface normal $\mathbf{N}$.
 
 ```glsl
 float brdf_lambertian(vec3 N, vec3 L) {
@@ -45,8 +45,8 @@ float brdf_lambertian(vec3 N, vec3 L) {
     <img src="../img/diffuse-wrapped.png" width="300">
 </figure>
 
-The Lambert diffuse color can also be wrapped around the material.
-This gives an easy method for a sub-surface scattering effect.
+Wrapping the lighting can be used to fake subsurface scattering or area light. 
+A parameter `wrap` is used which is a value between $[0, 1]$.
 
 ```glsl
 float brdf_lambertian_wrapped(vec3 N, vec3 L) {
@@ -76,7 +76,7 @@ TBA
 ## Gaussian
 
 <figure>
-    <img src="../img/gaussian.png" width="300">
+    <img src="../img/gauss.png" width="300">
 </figure>
 
 ```glsl
