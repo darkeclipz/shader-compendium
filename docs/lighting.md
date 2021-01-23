@@ -2,6 +2,8 @@
 
 ## Lambertian
 
+![Lambertian diffuse](../img/diffuse.png)
+
 ```glsl
 float brdf_lambertian(vec3 N, vec3 L) {
     float k = clamp(dot(N, L), 0., 1.);
@@ -9,7 +11,24 @@ float brdf_lambertian(vec3 N, vec3 L) {
 }
 ```
 
+## Lambertian (wrapped)
+
+![Lambertian diffuse (wrapped)](/img/diffuse-wrapped.png)
+
+The Lambert diffuse color can also be wrapped around the material.
+This gives an easy method for a sub-surface scattering effect.
+
+```glsl
+float brdf_lambertian_wrapped(vec3 N, vec3 L) {
+    float wrap = 0.5;
+    float k = max(0., (dot(L, N) + wrap) / (1. + wrap));
+    return k;
+}
+```
+
 ## Phong
+
+![Phong specular](../img/phong.png)
 
 ```glsl
 float brdf_phong(vec3 R, vec3 V, float exponent) {
@@ -24,6 +43,8 @@ TBA
 
 ## Gaussian
 
+![Gaussian specular](../img/gaussian.png)
+
 ```glsl
 float brdf_gaussian(vec3 N, vec3 H, float m) {
     float NHm = angle(N,H) / m;
@@ -34,6 +55,8 @@ float brdf_gaussian(vec3 N, vec3 H, float m) {
 ```
 
 ## Beckmann
+
+![Beckmann specular](../img/beckmann.png)
 
 ```glsl
 float brdf_beckmann(vec3 N, vec3 H, float m) {
@@ -49,6 +72,8 @@ float brdf_beckmann(vec3 N, vec3 H, float m) {
 ```
 
 ## GGX
+
+![GGX specular](../img/ggx.png)
 
 The GGX lighting model is a microfacet model for refracting through rough surfaces. It is also a model that is becoming popular for lighting in video games. [1] The GGX lighting model is [derived in this paper](http://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf).
 
