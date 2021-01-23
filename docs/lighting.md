@@ -1,5 +1,28 @@
 # Lighting models
 
+All the lighting models use the following notation, as illustrated in the image below.
+
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Blinn_Vectors.svg/220px-Blinn_Vectors.svg.png" />
+    <caption>Source &emdash; Wikipedia</caption>
+</figure>
+
+Let $P$ be the point on the surface, then:
+
+ * $\mathbf{N}$ is the normal vector of the surface.
+ * $\mathbf{L}$ is the vector from $P$ to the light source.
+ * $\mathbf{V}$ is the vector from $P$ to the camera (eye).
+ * $\mathbf{H}$ is the halfway vector between $L$ and $V$.
+ * $\mathbf{R}$ is the reflected vector $V$ around $N$.
+
+
+To find the reflection vector, we can use $R = \mathbf{V} - 2(mathbf{V}\cdot\mathbf{N})\mathbf{N}$.
+
+To find the halfway vector, we can use $H$ = \dfrac{L+V}{||\ L+V\ ||}$.
+
+!!! warn
+Note that all of these vectors are normalized, which is often denoted with a hat, like $\mathbf\hat{N}$.
+
 ## Lambertian
 
 <figure>
