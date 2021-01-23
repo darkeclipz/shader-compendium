@@ -10,15 +10,15 @@ as illustrated in the image below.
 
 Let $P$ be the point on the surface, then:
 
- * $\mathbf{N}$ is the normal vector of the surface.
+ * $\mathbf{N}$ is the normal vector of the surface at $P$.
  * $\mathbf{L}$ is the vector from $P$ to the light source.
  * $\mathbf{V}$ is the vector from $P$ to the camera (eye).
  * $\mathbf{H}$ is the halfway vector between $L$ and $V$.
  * $\mathbf{R}$ is the reflected vector $V$ around $N$.
 
-To find the reflection vector, we can use $R = \mathbf{V} - 2(mathbf{V}\cdot\mathbf{N})\mathbf{N}$.
+To find the reflection vector, we can use $\mathbf{R} = \mathbf{V} - 2(\mathbf{V}\cdot\mathbf{N})\mathbf{N}$, where $\mathbf{V}\cdot\mathbf{N}$ is a dot-product.
 
-To find the halfway vector, we can use $H = \dfrac{L+V}{||\ L+V\ ||}$.
+To find the halfway vector, we can use $\mathbf{H} = \dfrac{\mathbf{L}+\mathbf{V}}{||\ \matbf{L}+\mathbf{V}\ ||}$.
 
 !!! warn
     Note that all of these vectors are normalized, which is often denoted with a hat, like $\mathbf{\hat{N}}$.
